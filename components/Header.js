@@ -6,10 +6,12 @@ import {CartContext} from "@/components/CartContext";
 import BarsIcon from "@/components/icons/Bars";
 
 const StyledHeader = styled.header`
-  background-color: #222;
+  background-color:#6495ed;
 `;
 const Logo = styled(Link)`
   color:#fff;
+  font-size:40px;
+  font-family:Gabriola;
   text-decoration:none;
   position: relative;
   z-index: 3;
@@ -32,7 +34,7 @@ const StyledNav = styled.nav`
   left: 0;
   right: 0;
   padding: 70px 20px 20px;
-  background-color: #222;
+  background-color: #6495ed;
   @media screen and (min-width: 768px) {
     display: flex;
     position: static;
@@ -41,7 +43,7 @@ const StyledNav = styled.nav`
 `;
 const NavLink = styled(Link)`
   display: block;
-  color:#aaa;
+  color:#fff ;
   text-decoration:none;
   padding: 10px 0;
   @media screen and (min-width: 768px) {
@@ -68,13 +70,11 @@ export default function Header() {
   return (
     <StyledHeader>
       <Center>
-        <Wrapper>
-          <Logo href={'/'}>Ecommerce</Logo>
+        <Wrapper>  
+          <Logo href={'/'}>Optimum Ghana</Logo>
           <StyledNav mobileNavActive={mobileNavActive}>
             <NavLink href={'/'}>Home</NavLink>
             <NavLink href={'/products'}>All products</NavLink>
-            <NavLink href={'/categories'}>Categories</NavLink>
-            <NavLink href={'/account'}>Account</NavLink>
             <NavLink href={'/cart'}>Cart ({cartProducts.length})</NavLink>
           </StyledNav>
           <NavButton onClick={() => setMobileNavActive(prev => !prev)}>
